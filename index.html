@@ -909,15 +909,16 @@
               </div>
             </div>
             
+            <!-- action="https://script.google.com/macros/s/AKfycbweOTAu7d1ZbYHarPPzU-eLpzvOioAT6VTKVj8iBv3jFx5JRtCq5Y_pMbsAOFa0KCuaKw/exec"
+            method="post" -->
             
             <div class="col-lg-6">
               <form 
               id="form-data"
-              action="https://script.google.com/macros/s/AKfycbweOTAu7d1ZbYHarPPzU-eLpzvOioAT6VTKVj8iBv3jFx5JRtCq5Y_pMbsAOFa0KCuaKw/exec"
-              method="post"
                 class="php-email-form"
                 data-aos="fade-up"
                 data-aos-delay="200"
+                onsubmit="submitHandler(event)"
               >
                 <div class="row gy-4">
                   <div class="col-md-6">
@@ -968,7 +969,7 @@
                       Your message has been sent. Thank you!
                     </div> -->
 
-                    <button type="submit" >Send Message</button>
+                    <button type="submit" id="submit-button">Send Message</button>
                   </div>
                 </div>
               </form>

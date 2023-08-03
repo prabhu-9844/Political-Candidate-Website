@@ -1,40 +1,42 @@
 /**
-* Template Name: Append
-* Updated: Jul 27 2023 with Bootstrap v5.3.1
-* Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-document.addEventListener('DOMContentLoaded', () => {
+ * Template Name: Append
+ * Updated: Jul 27 2023 with Bootstrap v5.3.1
+ * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
+document.addEventListener("DOMContentLoaded", () => {
   "use strict";
 
   /**
    * Scroll top button
    */
-  let scrollTop = document.querySelector('.scroll-top');
+  let scrollTop = document.querySelector(".scroll-top");
 
   function toggleScrollTop() {
     if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      window.scrollY > 100
+        ? scrollTop.classList.add("active")
+        : scrollTop.classList.remove("active");
     }
   }
-  scrollTop.addEventListener('click', (e) => {
+  scrollTop.addEventListener("click", (e) => {
     e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   });
 
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+  window.addEventListener("load", toggleScrollTop);
+  document.addEventListener("scroll", toggleScrollTop);
 
   /**
    * Preloader
    */
-  const preloader = document.querySelector('#preloader');
+  const preloader = document.querySelector("#preloader");
   if (preloader) {
-    window.addEventListener('load', () => {
+    window.addEventListener("load", () => {
       preloader.remove();
     });
   }
@@ -42,35 +44,42 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
-  const selectBody = document.querySelector('body');
-  const selectHeader = document.querySelector('#header');
+  const selectBody = document.querySelector("body");
+  const selectHeader = document.querySelector("#header");
 
   function toggleScrolled() {
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    if (
+      !selectHeader.classList.contains("scroll-up-sticky") &&
+      !selectHeader.classList.contains("sticky-top") &&
+      !selectHeader.classList.contains("fixed-top")
+    )
+      return;
+    window.scrollY > 100
+      ? selectBody.classList.add("scrolled")
+      : selectBody.classList.remove("scrolled");
   }
 
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
+  document.addEventListener("scroll", toggleScrolled);
+  window.addEventListener("load", toggleScrolled);
 
   /**
    * Scroll up sticky header to headers with .scroll-up-sticky class
    */
   let lastScrollTop = 0;
-  window.addEventListener('scroll', function() {
-    if (!selectHeader.classList.contains('scroll-up-sticky')) return;
+  window.addEventListener("scroll", function () {
+    if (!selectHeader.classList.contains("scroll-up-sticky")) return;
 
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop && scrollTop > selectHeader.offsetHeight) {
-      selectHeader.style.setProperty('position', 'sticky', 'important');
+      selectHeader.style.setProperty("position", "sticky", "important");
       selectHeader.style.top = `-${header.offsetHeight + 50}px`;
     } else if (scrollTop > selectHeader.offsetHeight) {
-      selectHeader.style.setProperty('position', 'sticky', 'important');
+      selectHeader.style.setProperty("position", "sticky", "important");
       selectHeader.style.top = "0";
     } else {
-      selectHeader.style.removeProperty('top');
-      selectHeader.style.removeProperty('position');
+      selectHeader.style.removeProperty("top");
+      selectHeader.style.removeProperty("position");
     }
     lastScrollTop = scrollTop;
   });
@@ -78,36 +87,35 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Mobile nav toggle
    */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+  const mobileNavToggleBtn = document.querySelector(".mobile-nav-toggle");
 
   function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
+    document.querySelector("body").classList.toggle("mobile-nav-active");
+    mobileNavToggleBtn.classList.toggle("bi-list");
+    mobileNavToggleBtn.classList.toggle("bi-x");
   }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  mobileNavToggleBtn.addEventListener("click", mobileNavToogle);
 
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
+  document.querySelectorAll("#navmenu a").forEach((navmenu) => {
+    navmenu.addEventListener("click", () => {
+      if (document.querySelector(".mobile-nav-active")) {
         mobileNavToogle();
       }
     });
-
   });
 
   /**
    * Toggle mobile nav dropdowns
    */
-  document.querySelectorAll('.navmenu .has-dropdown i').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      if (document.querySelector('.mobile-nav-active')) {
+  document.querySelectorAll(".navmenu .has-dropdown i").forEach((navmenu) => {
+    navmenu.addEventListener("click", function (e) {
+      if (document.querySelector(".mobile-nav-active")) {
         e.preventDefault();
-        this.parentNode.classList.toggle('active');
-        this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+        this.parentNode.classList.toggle("active");
+        this.parentNode.nextElementSibling.classList.toggle("dropdown-active");
         e.stopImmediatePropagation();
       }
     });
@@ -116,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener("load", function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -124,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
           let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
           window.scrollTo({
             top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
+            behavior: "smooth",
           });
         }, 100);
       }
@@ -135,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * Initiate glightbox
    */
   const glightbox = GLightbox({
-    selector: '.glightbox'
+    selector: ".glightbox",
   });
 
   /**
@@ -147,43 +155,57 @@ document.addEventListener('DOMContentLoaded', () => {
    * Init isotope layout and filters
    */
   function initIsotopeLayout() {
-    document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-      let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-      let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-      let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+    document
+      .querySelectorAll(".isotope-layout")
+      .forEach(function (isotopeItem) {
+        let layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
+        let filter = isotopeItem.getAttribute("data-default-filter") ?? "*";
+        let sort = isotopeItem.getAttribute("data-sort") ?? "original-order";
 
-      let initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
-
-      isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-        filters.addEventListener('click', function() {
-          isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-          this.classList.add('filter-active');
-          initIsotope.arrange({
-            filter: this.getAttribute('data-filter')
-          });
-          if (typeof aosInit === 'function') {
-            aosInit();
+        let initIsotope = new Isotope(
+          isotopeItem.querySelector(".isotope-container"),
+          {
+            itemSelector: ".isotope-item",
+            layoutMode: layout,
+            filter: filter,
+            sortBy: sort,
           }
-        }, false);
-      });
+        );
 
-    });
+        isotopeItem
+          .querySelectorAll(".isotope-filters li")
+          .forEach(function (filters) {
+            filters.addEventListener(
+              "click",
+              function () {
+                isotopeItem
+                  .querySelector(".isotope-filters .filter-active")
+                  .classList.remove("filter-active");
+                this.classList.add("filter-active");
+                initIsotope.arrange({
+                  filter: this.getAttribute("data-filter"),
+                });
+                if (typeof aosInit === "function") {
+                  aosInit();
+                }
+              },
+              false
+            );
+          });
+      });
   }
-  window.addEventListener('load', initIsotopeLayout);
+  window.addEventListener("load", initIsotopeLayout);
 
   /**
    * Frequently Asked Questions Toggle
    */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
+  document
+    .querySelectorAll(".faq-item h3, .faq-item .faq-toggle")
+    .forEach((faqItem) => {
+      faqItem.addEventListener("click", () => {
+        faqItem.parentNode.classList.toggle("faq-active");
+      });
     });
-  });
 
   /**
    * Init swiper sliders
@@ -202,115 +224,134 @@ document.addEventListener('DOMContentLoaded', () => {
   function aosInit() {
     AOS.init({
       duration: 600,
-      easing: 'ease-in-out',
+      easing: "ease-in-out",
       once: true,
-      mirror: false
+      mirror: false,
     });
   }
-  window.addEventListener('load', aosInit);
-
+  window.addEventListener("load", aosInit);
 });
-new Swiper('.clients-slider', {
+new Swiper(".clients-slider", {
   speed: 400,
   loop: true,
   autoplay: {
     delay: 5000,
-    disableOnInteraction: false
+    disableOnInteraction: false,
   },
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true,
   },
   breakpoints: {
     320: {
       slidesPerView: 2,
-      spaceBetween: 40
+      spaceBetween: 40,
     },
     480: {
       slidesPerView: 3,
-      spaceBetween: 60
+      spaceBetween: 60,
     },
     640: {
       slidesPerView: 4,
-      spaceBetween: 80
+      spaceBetween: 80,
     },
     992: {
       slidesPerView: 6,
-      spaceBetween: 120
-    }
-  }
+      spaceBetween: 120,
+    },
+  },
 });
 
 /**
  * Init swiper slider with 1 slide at once in desktop view
  */
-new Swiper('.slides-1', {
+new Swiper(".slides-1", {
   speed: 600,
   loop: true,
   autoplay: {
     delay: 5000,
-    disableOnInteraction: false
+    disableOnInteraction: false,
   },
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
 /**
  * Init swiper slider with 3 slides at once in desktop view
  */
-new Swiper('.slides-3', {
+new Swiper(".slides-3", {
   speed: 600,
   loop: true,
   autoplay: {
     delay: 5000,
-    disableOnInteraction: false
+    disableOnInteraction: false,
   },
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 40
+      spaceBetween: 40,
     },
 
     1200: {
       slidesPerView: 3,
-    }
-  }
+    },
+  },
 });
 
-  // Function to handle the form submission
-  function submitHandler(event) {
-    event.preventDefault(); // Prevent the default form submission
-    // Add your form processing logic here
-    // For example, you can use AJAX to send the form data to the server
+// Function to handle the form submission
+function submitHandler(event) {
+  const submitButton = document.getElementById("submit-button");
+  submitButton.disabled = true;
+  event.preventDefault(); // Prevent the default form submission
 
-    // Show the success message (you can use other methods like a hidden div instead of an alert)
-    const successToast = new bootstrap.Toast(document.getElementById('successToast'));
-    successToast.show();
-    setTimeout(function() {
-      successToast.hide();
-    }, 2000);
-    document.getElementById("form-data").reset();
-  }
+  const formData = new FormData(document.getElementById("form-data"));
 
-  // Add an event listener to the form submit event
-  document.getElementById("form-data").addEventListener("submit", submitHandler);
+  fetch(
+    "https://script.google.com/macros/s/AKfycbweOTAu7d1ZbYHarPPzU-eLpzvOioAT6VTKVj8iBv3jFx5JRtCq5Y_pMbsAOFa0KCuaKw/exec",
+    {
+      method: "POST",
+      body: formData,
+    }
+  )
+    .then((response) => response.text())
+    .then((data) => {
+      // Handle the response from the server (if needed)
+      const successToast = new bootstrap.Toast(
+        document.getElementById("successToast")
+      );
+      successToast.show();
+      setTimeout(function () {
+        successToast.hide();
+      }, 2000);
+
+      // Optionally, you can reset the form fields after submission
+      document.getElementById("form-data").reset();
+      submitButton.disabled = false;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}
+
+// Add an event listener to the form submit event
+// document.getElementById("form-data").addEventListener("submit", submitHandler);
