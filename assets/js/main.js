@@ -188,13 +188,13 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Init swiper sliders
    */
-  function initSwiper() {
-    document.querySelectorAll('.swiper').forEach(function(swiper) {
-      let config = JSON.parse(swiper.querySelector('.swiper-config').innerHTML.trim());
-      new Swiper(swiper, config);
-    });
-  }
-  window.addEventListener('load', initSwiper);
+  // function initSwiper() {
+  //   document.querySelectorAll('.swiper').forEach(function(swiper) {
+  //     let config = JSON.parse(swiper.querySelector('.swiper-config').innerHTML.trim());
+  //     new Swiper(swiper, config);
+  //   });
+  // }
+  // window.addEventListener('load', initSwiper);
 
   /**
    * Animation on scroll function and init
@@ -296,3 +296,21 @@ new Swiper('.slides-3', {
     }
   }
 });
+
+  // Function to handle the form submission
+  function submitHandler(event) {
+    event.preventDefault(); // Prevent the default form submission
+    // Add your form processing logic here
+    // For example, you can use AJAX to send the form data to the server
+
+    // Show the success message (you can use other methods like a hidden div instead of an alert)
+    const successToast = new bootstrap.Toast(document.getElementById('successToast'));
+    successToast.show();
+    setTimeout(function() {
+      successToast.hide();
+    }, 2000);
+    document.getElementById("form-data").reset();
+  }
+
+  // Add an event listener to the form submit event
+  document.getElementById("form-data").addEventListener("submit", submitHandler);
