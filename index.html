@@ -78,7 +78,9 @@
             <li><a href="index.html#portfolio">Events</a></li>
             <li><a href="index.html#team">Media</a></li>
             <li><a href="blog.html">News</a></li>
-            <li class="dropdown has-dropdown">
+            
+              <!-- Dropdown content -->
+            <!-- <li class="dropdown has-dropdown">
               <a href="#"
                 ><span>Dropdown</span> <i class="bi bi-chevron-down"></i
               ></a>
@@ -101,7 +103,7 @@
                 <li><a href="#">Dropdown 3</a></li>
                 <li><a href="#">Dropdown 4</a></li>
               </ul>
-            </li>
+            </li> -->
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
 
@@ -931,6 +933,48 @@
                       required
                     />
                   </div>
+                  <div class="col-md-6">
+                    <select name="gender" class="form-control" required>
+                      <option label="Select Gender"></option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Others">Other</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="date"
+                      name="dob"
+                      class="form-control"
+                      placeholder="Date Of Birth"
+                      required
+                    />
+                  </div>
+                 
+                  <div class="col-md-6">
+                    <select name="graduation" class="form-control"  required>
+                      <option  label="Select Graduation"></option>
+                      <option value="Engineering">Engineering</option>
+                      <option value="Medical">Medical</option>
+                      <option value="Science">Science</option>
+                      <option value="Commerce">Commerce</option>
+                      <option value="Arts">Arts</option>
+                      <option value="Law">Law</option>
+                      <option value="Others">Others</option>
+                      <!-- Add more options as needed -->
+                    </select>
+                    
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="mobileNumber"
+                      placeholder="Mobile Number"
+                      required
+                    />
+                  </div>
 
                   <div class="col-md-6">
                     <input
@@ -941,23 +985,11 @@
                       required
                     />
                   </div>
-                  
-
-                  <div class="col-md-12">
-                    <input
-                      type="number"
-                      class="form-control"
-                      name="mobileNumber"
-                      placeholder="Mobile Number"
-                      required
-                    />
-                  </div>
-
                   <div class="col-md-12">
                     <textarea
                       class="form-control"
                       name="message"
-                      rows="6"
+                      rows="4"
                       placeholder="Message"
                       required
                     ></textarea>
@@ -972,8 +1004,8 @@
 
                     <button type="submit" id="submit-button">Send Message</button>
                   </div>
+                </form>
                 </div>
-              </form>
             </div>
             <!-- End Contact Form -->
           </div>

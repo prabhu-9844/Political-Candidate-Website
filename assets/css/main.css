@@ -2049,12 +2049,14 @@ section {
 .contact .php-email-form input[type="text"],
 .contact .php-email-form input[type="email"],
 .contact .php-email-form input[type="number"],
+.contact .php-email-form input[type="date"],
+.contact .php-email-form select,
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
-  color: var(--color-default);
+  /* color: var(--color-default); */
   background-color: rgba(var(--color-background-rgb), 0.5);
   border-color: rgba(var(--color-default-rgb), 0.2);
 }
@@ -2062,13 +2064,17 @@ section {
 .contact .php-email-form input[type="text"]:focus,
 .contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form input[type="number"]:focus,
+.contact .php-email-form input[type="date"]:focus,
+.contact .php-email-form select:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--color-primary);
 }
 
-.contact .php-email-form input[type="text"]::-moz-placeholder,
+/* .contact .php-email-form input[type="text"]::-moz-placeholder,
 .contact .php-email-form input[type="email"]::-moz-placeholder,
 .contact .php-email-form input[type="number"]::-moz-placeholder,
+.contact .php-email-form input[type="date"]::-moz-placeholder,
+.contact .php-email-form select[label='Select Gender']::-moz-placeholder,
 .contact .php-email-form textarea::-moz-placeholder {
   color: rgba(var(--color-default-rgb), 0.3);
 }
@@ -2076,9 +2082,11 @@ section {
 .contact .php-email-form input[type="text"]::placeholder,
 .contact .php-email-form input[type="email"]::placeholder,
 .contact .php-email-form input[type="number"]::placeholder,
+.contact .php-email-form input[type="date"]::placeholder,
+.contact .php-email-form select[label='Select Gender'] option::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: rgba(var(--color-default-rgb), 0.3);
-}
+} */
 
 .contact .php-email-form button[type="submit"] {
   background: var(--color-primary);

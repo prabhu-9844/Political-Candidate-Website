@@ -325,9 +325,16 @@ function submitHandler(event) {
   event.preventDefault(); // Prevent the default form submission
 
   const formData = new FormData(document.getElementById("form-data"));
+  // console.log(formData.get("name"));
+  // console.log(formData.get("gender"));
+  // console.log(formData.get("dob"));
+  // console.log(formData.get("graduation"));
+  // console.log(formData.get("mobileNumber"));
+  // console.log(formData.get("email"));
+  // console.log(formData.get("message"));
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbweOTAu7d1ZbYHarPPzU-eLpzvOioAT6VTKVj8iBv3jFx5JRtCq5Y_pMbsAOFa0KCuaKw/exec",
+    "https://script.google.com/macros/s/AKfycbyKB_qyw-gqbLBLamLy6d5BREhg2_WCZwei5W1rL5kIozQQ7pOifHNMnEN_GF1-CyGACg/exec",
     {
       method: "POST",
       body: formData,
