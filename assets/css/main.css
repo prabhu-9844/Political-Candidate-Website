@@ -822,8 +822,8 @@ section {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  /* -o-object-fit: contain; */
+  object-fit:none;
   z-index: 2;
 }
 
