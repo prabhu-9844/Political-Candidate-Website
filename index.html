@@ -44,6 +44,9 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
 
+    <!-- Date picker -->
+    <script src="https://cdn.jsdelivr.net/npm/datepickr@4.0.0/dist/datepickr.min.js"></script>
+
     <!-- =======================================================
   * Template Name: Append
   * Updated: Jul 27 2023 with Bootstrap v5.3.1
@@ -910,7 +913,7 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="200">
                     <i class="bi bi-geo-alt"></i>
                     <h3>Address</h3>
-                    <p>Bengaluru</p>
+                    <p>#547,18th cross, 9th Main Rd,<br> MC Layout, Vijayanagar,<br> Bengaluru-560040</p>
                     <p>Karnataka</p>
                   </div>
                 </div>
@@ -920,8 +923,8 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="300">
                     <i class="bi bi-telephone"></i>
                     <h3>Call Us</h3>
-                    <p>+91 1234567890</p>
-                    <p>+91 1234567890</p>
+                    <p>+91 9164881166</p>
+                    <!-- <p>+91 1234567890</p> -->
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -930,8 +933,8 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="400">
                     <i class="bi bi-envelope"></i>
                     <h3>Email Us</h3>
-                    <p>info@example.com</p>
-                    <p>contact@example.com</p>
+                    <p>nrgowda63@gmail.com</p>
+                    <!-- <p>contact@example.com</p> -->
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -941,7 +944,7 @@
                     <i class="bi bi-clock"></i>
                     <h3>Office Hours</h3>
                     <p>All Days</p>
-                    <p>9:00AM - 05:00PM</p>
+                    <p>9:00AM - 9:00PM</p>
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -980,7 +983,7 @@
                   <div class="col-md-6">
                     <input
                       type="date"
-                      label="Date of Birth"
+                      id="dateInput"
                       name="dob"
                       class="form-control"
                       placeholder="Date Of Birth"
