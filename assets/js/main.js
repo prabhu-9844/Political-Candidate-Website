@@ -362,3 +362,27 @@ function submitHandler(event) {
 
 // Add an event listener to the form submit event
 // document.getElementById("form-data").addEventListener("submit", submitHandler);
+
+//English Kannada set time interval
+
+const kan = document.getElementById("mainText1");
+const eng = document.getElementById("mainText2");
+
+function showEnglishContent() {
+  eng.style.display = "block";
+  kan.style.display = "none";
+}
+
+function showKannadaContent() {
+  eng.style.display = "none";
+  kan.style.display = "block";
+}
+
+function switchContent() {
+  showEnglishContent();
+  setTimeout(showKannadaContent, 10000);
+}
+
+switchContent();
+
+setInterval(switchContent, 20000);
