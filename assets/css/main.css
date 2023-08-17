@@ -18,6 +18,7 @@
   font-weight: normal;
   font-style: normal;
 }
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 :root {
   --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
@@ -824,7 +825,29 @@ section {
   justify-content: center;
 }
 /* #animate-charcter{
-
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 } */
 .hero img {
   position: absolute;
@@ -850,21 +873,21 @@ section {
   position: relative;
   z-index: 2;
   margin-left: 50%;
-  
 }
 
 .hero h2 {
   margin: 0;
   font-size: 40px;
   font-weight: 700;
+  /* font-family: "Alfa Slab One"; */
 }
-#left-quatation{
-   display: inline-block;
+#left-quatation {
+  display: inline-block;
   left: -5px;
   position: relative;
   color: #e84545;
 }
-#right-quatation{
+#right-quatation {
   display: inline-block;
   right: -5px;
   position: relative;
@@ -911,9 +934,9 @@ section {
   background-color: rgba(var(--color-primary-rgb), 0.9);
 }
 
-@media (min-width:769px) and (max-width:2000px){
+@media (min-width: 769px) and (max-width: 2000px) {
   .hero .container {
-    margin-top: -10%
+    margin-top: -10%;
   }
 }
 
@@ -929,13 +952,13 @@ section {
     font-size: 16px;
   }
 }
-@media (max-width:512px){
+@media (max-width: 512px) {
   .hero .container {
     margin-top: -95%;
     left: -5%;
   }
 }
-@media (max-width : 400px){
+@media (max-width: 400px) {
   .hero .container {
     margin-top: -70%;
   }
