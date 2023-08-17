@@ -11,6 +11,13 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+@font-face {
+  font-family: "Alkatra";
+  src: url("../Alkatra/static/Alkatra-Bold.ttf") format("ttf"); /* Replace with the actual font file paths */
+  /* url('fonts/alkatra.woff') format('woff'); */
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
@@ -824,7 +831,7 @@ section {
   /* top: 10%; */
   width: 100%;
   height: 100%;
-  -o-object-fit:cover;
+  -o-object-fit: cover;
   object-fit: cover;
   z-index: 2;
 }
@@ -848,13 +855,14 @@ section {
   margin: 0;
   font-size: 44px;
   font-weight: 700;
- 
+
 }
 
 .hero p {
-  color: rgba(var(--color-default-rgb), 0.8);
+  color: rgba(var(--color-default-rgb),1);
   margin: 5px 0 0 0;
   font-size: 20px;
+  font-family: Helvetica, sans-serif;
 }
 
 .hero .sign-up-form {
