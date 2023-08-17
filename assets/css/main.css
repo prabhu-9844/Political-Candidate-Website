@@ -304,9 +304,9 @@ section {
   .navmenu a:focus {
     color: var(--color-nav);
     padding: 18px 15px;
-    font-size: 16px;
+    font-size: 20px;
     font-family: var(--font-secondary);
-    font-weight: 400;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -823,7 +823,9 @@ section {
   align-items: center;
   justify-content: center;
 }
+/* #animate-charcter{
 
+} */
 .hero img {
   position: absolute;
   inset: 0;
@@ -848,21 +850,34 @@ section {
   position: relative;
   z-index: 2;
   margin-left: 50%;
-  margin-top: -15%;
+  
 }
 
 .hero h2 {
   margin: 0;
-  font-size: 44px;
+  font-size: 40px;
   font-weight: 700;
-
 }
-
+#left-quatation{
+   display: inline-block;
+  left: -5px;
+  position: relative;
+  color: #e84545;
+}
+#right-quatation{
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  /* top: 10px; */
+  transform: scale(-1, -1);
+  color: #e84545;
+}
 .hero p {
-  color: rgba(var(--color-default-rgb),1);
+  color: rgba(var(--color-default-rgb), 1);
   margin: 5px 0 0 0;
   font-size: 20px;
   font-family: Helvetica, sans-serif;
+  text-align: center;
 }
 
 .hero .sign-up-form {
@@ -896,13 +911,33 @@ section {
   background-color: rgba(var(--color-primary-rgb), 0.9);
 }
 
+@media (min-width:769px) and (max-width:2000px){
+  .hero .container {
+    margin-top: -10%
+  }
+}
+
 @media (max-width: 768px) {
+  .hero .container {
+    margin-top: -25%;
+  }
   .hero h2 {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .hero p {
     font-size: 16px;
+  }
+}
+@media (max-width:512px){
+  .hero .container {
+    margin-top: -95%;
+    left: -5%;
+  }
+}
+@media (max-width : 400px){
+  .hero .container {
+    margin-top: -70%;
   }
 }
 
@@ -1276,8 +1311,10 @@ section {
 }
 
 .features .features-item img {
-  border: 6px solid var(--color-box-background);
-  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  border: 6px solid #fff;
+  /* var(--color-box-background); */
+  box-shadow: 0 15px 30px -10px rgba(238, 52, 10, 0.3);
+  border-radius: 10px;
 }
 
 .features .features-item .features-img-bg {
