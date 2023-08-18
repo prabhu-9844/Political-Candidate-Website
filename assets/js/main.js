@@ -365,27 +365,27 @@ function submitHandler(event) {
 
 //English Kannada set time interval
 
-const kan = document.getElementById("mainText1");
-const eng = document.getElementById("mainText2");
+// const kan = document.getElementById("mainText1");
+// const eng = document.getElementById("mainText2");
 
-function showEnglishContent() {
-  eng.style.display = "block";
-  kan.style.display = "none";
-}
+// function showEnglishContent() {
+//   eng.style.display = "block";
+//   kan.style.display = "none";
+// }
 
-function showKannadaContent() {
-  eng.style.display = "none";
-  kan.style.display = "block";
-}
+// function showKannadaContent() {
+//   eng.style.display = "none";
+//   kan.style.display = "block";
+// }
 
-function switchContent() {
-  showEnglishContent();
-  setTimeout(showKannadaContent, 10000);
-}
+// function switchContent() {
+//   showEnglishContent();
+//   setTimeout(showKannadaContent, 10000);
+// }
 
-switchContent();
+// switchContent();
 
-setInterval(switchContent, 20000);
+// setInterval(switchContent, 20000);
 
 //date picker in contact form
 // Add a date picker to the input field when the document is ready
@@ -405,3 +405,41 @@ setInterval(switchContent, 20000);
 //     datePicker.open(); // Open the date picker
 //   });
 // });
+
+/**
+ * Clients Slider
+ */
+(function () {
+  new Swiper(".gallery-slider", {
+    speed: 400,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+    },
+  });
+})();
+const galleryLightbox = GLightbox({
+  selector: '.gallery-lightbox'
+});
