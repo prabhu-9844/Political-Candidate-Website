@@ -388,12 +388,15 @@ function submitHandler(event) {
 // setInterval(switchContent, 20000);
 
 //date picker in contact form
-document.addEventListener("DOMContentLoaded", function() {
+
+document.addEventListener("DOMContentLoaded", function () {
   const dateInput = document.getElementById("dateInput");
 
-  flatpickr(dateInput, {
-    dateFormat: 'd/m/Y',
-    placeholder: 'Date Of Birth'
+  dateInput.addEventListener("click", function () {
+    flatpickr(dateInput, {
+      dateFormat: "d/m/Y",
+      placeholder: "Date of Birth",
+    }).open(); // Open the date picker when the input is clicked
   });
 });
 
@@ -432,5 +435,5 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 })();
 const galleryLightbox = GLightbox({
-  selector: '.gallery-lightbox'
+  selector: ".gallery-lightbox",
 });
