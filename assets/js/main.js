@@ -388,23 +388,14 @@ function submitHandler(event) {
 // setInterval(switchContent, 20000);
 
 //date picker in contact form
-// Add a date picker to the input field when the document is ready
-// document.addEventListener("DOMContentLoaded", function () {
-//   const dateInput = document.getElementById("dateInput");
+document.addEventListener("DOMContentLoaded", function() {
+  const dateInput = document.getElementById("dateInput");
 
-//   dateInput.addEventListener("focus", function () {
-//     // Create a new date picker
-//     const datePicker = datePicker({
-//       dateFormat: "d/m/Y", // Set the desired date format
-//       position: "bottom", // Adjust the position of the date picker
-//       onSelect: (date) => {
-//         dateInput.value = date.toLocaleDateString("en-GB"); // Format date
-//       },
-//     });
-
-//     datePicker.open(); // Open the date picker
-//   });
-// });
+  flatpickr(dateInput, {
+    dateFormat: 'd/m/Y',
+    placeholder: 'Date Of Birth'
+  });
+});
 
 /**
  * Clients Slider
