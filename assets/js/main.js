@@ -405,7 +405,7 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 (function () {
   new Swiper(".gallery-slider", {
-    speed: 400,
+    speed: 700,
     loop: true,
     centeredSlides: true,
     autoplay: {
