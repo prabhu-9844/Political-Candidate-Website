@@ -687,6 +687,21 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+@media screen and (max-width: 365px){
+  #footer-name{
+    font-size: 20px; 
+  } 
+}
+@media screen and (max-width:300px){
+  #footer-name{
+    font-size: 18px;
+  }
+}
+@media screen and (max-width:273px){
+  #footer-name{
+    font-size: 15px;
+  }
+}
 .footer {
   --color-background: #f4f4f4;
   --color-box-background: #eaeaea;
