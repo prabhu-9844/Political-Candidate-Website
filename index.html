@@ -7,7 +7,7 @@
     <title>Neelakanta R Gowda</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
-
+    <link rel="icon" type="image/png" href="./assets/img/favicon_inc.png">
     <!-- Favicons -->
     <!-- <link href="assets/img/favicon.png" rel="icon" /> -->
     <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" /> -->
@@ -62,6 +62,10 @@
   </head>
 
   <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
+    <div id="loader" class="loader-container">
+      <div class="loader"></div>
+    </div>
+    
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
       <div
@@ -1201,6 +1205,12 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-   
+    <script>
+      window.onload = function () {
+        // Hide the loader when the page is fully loaded
+        var loader = document.getElementById("loader");
+        loader.style.display = "none";
+      };
+    </script>
   </body>
 </html>
