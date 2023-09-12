@@ -218,6 +218,16 @@ section {
   transition: 0.3s;
 }
 
+.nav-download-img{
+  color: var(--color-inverse);
+  /* background: var(--color-primary); */
+  font-size: 14px;
+  padding: 8px 26px;
+  margin: 0;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--color-inverse);
@@ -323,7 +333,7 @@ section {
     transition: 0.3s;
   }
 
-  .navmenu li:last-child a {
+  .navmenu li:last-child a, .navmenu li:nth-last-child(2) {
     padding-right: 0;
   }
 
@@ -2093,7 +2103,15 @@ section {
   white-space: nowrap;
   transition: width 0.5s ease-in-out;
 }
-
+/* @media (max-width: 1199px) {
+  .download-text{
+    display: inline-block;
+  vertical-align: middle;
+  width: 1500px;
+  white-space: nowrap;
+  /* transition: width 0.5s ease-in-out; */
+  /* }
+} */ 
 .download-icon:hover + .download-text {
   width: 300px; /* Adjust this value to fit your text */
 }
