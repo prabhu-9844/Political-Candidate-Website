@@ -2059,6 +2059,44 @@ section {
 
 /* Contact Section - Home Page
 ------------------------------*/
+
+.application-download{
+  background-color: #e84545;
+  padding: 15px 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: -2%;
+  margin-bottom: 2%;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  
+}
+.downlokad-icon {
+  width: 20px;
+  height: 20px;
+  background: url('/assets/download.png') no-repeat center center;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: cover;
+}
+.download-img{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.download-text {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  width: 0px;
+  white-space: nowrap;
+  transition: width 0.5s ease-in-out;
+}
+
+.download-icon:hover + .download-text {
+  width: 300px; /* Adjust this value to fit your text */
+}
 .contact {
   --color-box-background: #f7f7f7;
 }
@@ -3143,3 +3181,4 @@ input[type="number"] {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
