@@ -217,7 +217,24 @@ section {
   border-radius: 4px;
   transition: 0.3s;
 }
+.together{
+  position: relative;
+}
 
+.application-top{
+  /* width: 50px; */
+  display: inline-block;
+  position: absolute;
+  top: 120%;
+  /*left: 50%; */
+  background-color: #e84545;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.application-top span:hover{
+  text-decoration: underline;
+}
 .nav-download-img {
   color: var(--color-inverse);
   /* background: var(--color-primary); */
