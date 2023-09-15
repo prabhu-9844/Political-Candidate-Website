@@ -241,6 +241,11 @@ section {
 .application-top span:hover{
   text-decoration: underline;
 }
+@media (max-width:500px){
+  .application-top{
+    top: 100%;
+  }
+}
 .nav-download-img {
   color: var(--color-inverse);
   /* background: var(--color-primary); */
@@ -1068,13 +1073,13 @@ section {
 }
 @media (max-width: 512px) {
   .hero .container {
-    margin-top: -65%;
+    margin-top: -35%;
     left: -5%;
   }
 }
 @media (max-width: 400px) {
   .hero .container {
-    margin-top: -50%;
+    margin-top: -30%;
   }
 }
 
