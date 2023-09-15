@@ -225,7 +225,7 @@ section {
   /* width: 50px; */
   display: inline-block;
   position: absolute;
-  top: 120%;
+  top: 110%;
   /*left: 50%; */
   background-color: #e84545;
   padding: 5px 10px;
@@ -1068,13 +1068,13 @@ section {
 }
 @media (max-width: 512px) {
   .hero .container {
-    margin-top: -95%;
+    margin-top: -65%;
     left: -5%;
   }
 }
 @media (max-width: 400px) {
   .hero .container {
-    margin-top: -70%;
+    margin-top: -50%;
   }
 }
 
@@ -3295,4 +3295,53 @@ input[type="number"] {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Styles for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 70%;
+  position: relative;
+ color: black;
+}
+
+.close {
+  position: absolute;
+  top: 2px;
+  right: 15px;
+  cursor: pointer;
+  color: black;
+  font-size: 30px;
+}
+.modal1:hover{
+  text-decoration: underline;
+}
+.modal2:hover{
+  text-decoration: underline;
+}
+.modal3:hover{
+  text-decoration: underline;
+}
+
+/* Style for the list items */
+ul {
+  /* list-style: none; */
+  /* padding: 0; */
+}
+
+li {
+  cursor: pointer;
 }

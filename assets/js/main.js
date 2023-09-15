@@ -437,3 +437,28 @@ document.addEventListener("DOMContentLoaded", function () {
 const galleryLightbox = GLightbox({
   selector: ".gallery-lightbox",
 });
+
+const listItems = document.querySelectorAll('li');
+const modals = document.querySelectorAll('.modal');
+
+listItems.forEach((item) => {
+    item.addEventListener('click', () => {
+        const targetModalId = item.getAttribute('data-target');
+        const targetModal = document.getElementById(targetModalId);
+        targetModal.style.display = 'block';
+
+        // Add a click event listener to the modal's overlay
+        targetModal.addEventListener('click', (event) => {
+            if (event.target === targetModal) {
+                targetModal.style.display = 'none';
+            }
+        });
+    });
+});
+
+modals.forEach((modal) => {
+    const closeBtn = modal.querySelector('.close');
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+});
