@@ -462,3 +462,34 @@ modals.forEach((modal) => {
         modal.style.display = 'none';
     });
 });
+
+//Lazy loading of Images in gallery section
+  window.addEventListener('load', function() {
+    // When the page is fully loaded, hide the loading spinner
+    document.getElementById('loading-spinner').style.display = 'none';
+  });
+
+  // Using Intersection Observer to detect when images enter the viewport
+  const images = document.querySelectorAll('.lazy-load-img');
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1, // Adjust as needed
+  };
+
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const image = entry.target;
+        image.src = image.getAttribute('data-src');
+        image.onload = () => {
+          // Image is loaded, you can hide a loading animation specific to this image if needed
+        };
+        observer.unobserve(image);
+      }
+    });
+  }, options);
+
+  images.forEach((image) => {
+    imageObserver.observe(image);
+  });
